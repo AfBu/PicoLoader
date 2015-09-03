@@ -1,0 +1,120 @@
+body {
+	padding: 0;
+	margin: 0;
+	background-color: #222;
+	font-family: Arial, sans-serif;
+}
+
+#pico-container {
+	width: 580px;
+	height: 540px;
+	margin: 20px auto 0 auto;
+	border: #ddd 10px solid;
+	border-bottom: #ddd 50px solid;
+	position: relative;
+}
+#pico-container .btns {
+	position: absolute;
+	bottom: -35px;
+	left: 0;
+	text-align: right;
+	width: 100%;
+}
+#pico-container button {
+	display: inline-block;
+	background-color: #eee;
+	border: none;
+	border-bottom: 5px #bbb solid;
+	outline: none;
+	height: 25px;
+	position: relative;
+}
+#pico-container button:active {
+	height: 22px;
+	top: 3px;
+	border-bottom: 2px #bbb solid;
+}
+
+.controller {
+	position: absolute;
+	left: 50%;
+	top: 160px;
+	width: 120px;
+	height: 240px;
+	background-color: #ddd;
+	border-bottom: 10px #888 solid;
+    cursor: default;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.controller button {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	background-color: #444;
+	border: none;
+	border-bottom: 5px #222 solid;
+	outline: none;
+	left: 50%;
+	cursor: pointer;
+	box-shadow: 0 2px 15px rgba(0,0,0,0.5);
+}
+.controller .title {
+	text-align: center;
+	margin-top: 51px;
+	color: #444;
+	text-shadow: 0 1px 0 #fff;
+}
+.controller button:active {
+	margin-top: 3px;
+	height: 27px;
+	border-bottom: 2px #222 solid;
+	box-shadow: 0 2px 15px rgba(0,0,0,0.25);
+}
+.controller .up {
+	top: 15px;
+	margin-left: -15px;
+}
+.controller .down {
+	top: 75px;
+	margin-left: -15px;
+}
+.controller .left {
+	top: 45px;
+	margin-left: -45px;
+}
+.controller .right {
+	top: 45px;
+	margin-left: 15px;
+}
+.controller .a, .controller .b {
+	color: #85082E;
+	text-shadow: 0 1px 0 #FFCCDB;
+	font-weight: bold;
+	background-color: #ff004d;
+	border-bottom: #7e2553 5px solid;
+}
+.controller .a:active, .controller .b:active {
+	border-bottom: #7e2553 2px solid;
+}
+.controller .a {
+	top: 160px;
+	margin-left: -40px;
+	border-radius: 30px
+}
+.controller .b {
+	top: 180px;
+	margin-left: 10px;
+	border-radius: 30px
+}
+
+#controller-1 {
+	margin-left: -440px;
+}
+#controller-2 {
+	margin-left: 320px;
+}

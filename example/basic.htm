@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>PicoLoader Basic Example</title>
+		<script src="../src/picoloader.js"></script>
+		<script>
+			/* Load Pico-8 Web Player */
+			document.addEventListener("DOMContentLoaded", function(event) { 
+				PicoLoad('pico-container', 'cart.p8.png', 'pico8.js');
+			});
+		</script>
+	</head>
+	<body>
+		<div id="pico-container"></div>
+	</body>
+</html>

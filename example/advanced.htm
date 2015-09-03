@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>PicoLoader Advanced Example</title>
+		<link rel="stylesheet" href="advanced.css">
+		<script src="../src/picoloader.js"></script>
+		<script>
+			/* Load Pico-8 Web Player */
+			document.addEventListener("DOMContentLoaded", function(event) { 
+				PicoLoad('pico-container', 'cart.p8.png', 'pico8.js');
+			});
+
+			/* Handle buttons */
+			document.addEventListener("DOMContentLoaded", function(e) { 
+				var btns = document.getElementsByTagName('button');
+
+				for (i in btns) {
+					var btn = btns[i];
+
+					btn.addEventListener('mousedown', function (e) {
+						if (this.getAttribute('btn') == undefined) return;
+
+						var k = parseInt(this.getAttribute('btn'));
+						var p = parseInt(this.getAttribute('p'));
+						PicoPress(k, p);
+					});
+
+					btn.addEventListener('mouseup', function (e) {
+						if (this.getAttribute('btn') == undefined) return;
+
+						var k = parseInt(this.getAttribute('btn'));
+						var p = parseInt(this.getAttribute('p'));
+						PicoRelease(k, p);
+					});
+				}
+			});
+
+			document.addEventListener("keydown", function (e) {
+				console.log(e.keyCode);
+			});
+		</script>
+	</head>
+	<body>
+		<div id="pico-container">
+			<div class="btns">
+				<button id="pause-btn" onclick="PicoPause()">PAUSE</button>
+				<button id="reset-btn" onclick="PicoReset()">RESET</button>
+				<button id="mute-btn" onclick="PicoMute()">MUTE</button>
+			</div>
+		</div>
+		<div class="controller" id="controller-1">
+			<button btn="2" p="0" class="up"></button>
+			<button btn="3" p="0" class="down"></button>
+			<button btn="0" p="0" class="left"></button>
+			<button btn="1" p="0" class="right"></button>
+			<button btn="4" p="0" class="a">A</button>
+			<button btn="5" p="0" class="b">B</button>
+			<div class="title">P1</div>
+		</div>
+		<div class="controller" id="controller-2">
+			<button btn="2" p="1" class="up"></button>
+			<button btn="3" p="1" class="down"></button>
+			<button btn="0" p="1" class="left"></button>
+			<button btn="1" p="1" class="right"></button>
+			<button btn="4" p="1" class="a">A</button>
+			<button btn="5" p="1" class="b">B</button>
+			<div class="title">P2</div>
+		</div>
+	</body>
+</html>
